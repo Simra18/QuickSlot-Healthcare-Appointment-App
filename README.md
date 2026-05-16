@@ -9,10 +9,8 @@ The project was developed as part of Android Application Development practical i
 
 The workflow of the QuickSlot application follows a step-by-step healthcare appointment booking process. The application guides the user from authentication to appointment confirmation and management.
 
-```text
-Splash → Login → Home → Doctor List → Doctor Details
-→ Booking → Confirmation → My Appointments
-```
+Splash → Login → Home → Doctor List → Doctor Details → Booking → Confirmation → My Appointments
+
 ---
 
 ## Step 1: Splash Screen
