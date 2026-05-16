@@ -5,7 +5,132 @@ QuickSlot is an Android-based healthcare appointment booking application develop
 The project was developed as part of Android Application Development practical implementation and demonstrates Android concepts such as RecyclerView, SharedPreferences, Intents, Form Handling, Dialog Boxes, Notifications, Animations, and Material UI Design.
 
 ---
+# Application Workflow
 
+The workflow of the QuickSlot application follows a step-by-step healthcare appointment booking process. The application guides the user from authentication to appointment confirmation and management.
+
+```text
+Splash → Login → Home → Doctor List → Doctor Details
+→ Booking → Confirmation → My Appointments
+```
+---
+
+## Step 1: Splash Screen
+
+- The application launches with a branded splash screen.
+- Application logo and branding are displayed.
+- Smooth transition animation redirects the user to the Login Screen.
+
+---
+
+## Step 2: Login Authentication
+
+- User enters email and password credentials.
+- Input validation is performed.
+- If credentials are valid:
+  - User is redirected to the Home Screen.
+- If credentials are invalid:
+  - Toast message is displayed.
+
+---
+
+## Step 3: Home Screen Navigation
+
+The Home Screen acts as the central dashboard of the application.
+
+Users can:
+- View available doctors
+- Book new appointments
+- Access previously booked appointments
+
+---
+
+## Step 4: Doctor Listing
+
+- Doctors are displayed using RecyclerView with card layouts.
+- Each card contains:
+  - Doctor Name
+  - Specialization
+  - Experience
+  - Profile Image
+- Users can click on a doctor card to view detailed information.
+
+---
+
+## Step 5: Doctor Details
+
+- Detailed doctor information is displayed.
+- Information includes:
+  - Doctor Name
+  - Specialization
+  - Experience
+  - Doctor Profile Image
+- Users can proceed to appointment booking from this screen.
+
+---
+
+## Step 6: Appointment Booking
+
+Users enter:
+- Patient Name
+- Symptoms
+- Appointment Date
+- Appointment Time
+
+Features used:
+- DatePickerDialog
+- TimePickerDialog
+- Form Validation
+
+If all fields are valid:
+- Appointment data is stored using SharedPreferences.
+- User proceeds to Confirmation Screen.
+
+---
+
+## Step 7: Appointment Confirmation
+
+The confirmation screen displays:
+- Appointment ID
+- Patient Name
+- Doctor Name
+- Date and Time
+- Symptoms
+- Appointment Status
+
+Additional actions:
+- Booking success toast message
+- Local notification generation
+
+---
+
+## Step 8: My Appointments Management
+
+Users can:
+- View all booked appointments
+- Manage appointment records
+- Cancel appointments
+
+Appointments are displayed using modern card layouts.
+
+---
+
+## Step 9: Appointment Cancellation
+
+- When user clicks cancel:
+  - Confirmation AlertDialog is displayed.
+- If confirmed:
+  - Appointment is removed from SharedPreferences.
+  - Cancellation toast message is displayed.
+
+---
+
+## Step 10: Empty State Handling
+
+If no appointments exist:
+- A “No Appointments Available” screen is displayed.
+- User is guided to book a new appointment.
+---
 # Features
 
 - Splash Screen with Branding
@@ -138,28 +263,6 @@ The project was developed as part of Android Application Development practical i
 | Screenshot | Description |
 |---|---|
 | <img src="https://github.com/user-attachments/assets/4042d902-1f60-42a0-9deb-b85cfe703442" width="220"/> | Displays an empty state screen when no appointments are booked. The screen informs the user that no appointments are available and provides navigation options to book a new appointment. |
-
----
-
-# Application Flow
-
-```text
-Splash Screen
-      ↓
-Login Screen
-      ↓
-Home Screen
-      ↓
-Doctor List
-      ↓
-Doctor Details
-      ↓
-Book Appointment
-      ↓
-Confirmation Screen
-      ↓
-My Appointments
-```
 
 ---
 
